@@ -10,6 +10,9 @@ hash git >/dev/null && /usr/bin/env git clone https://github.com/robbyrussell/oh
   exit
 }
 
+wget --no-check-certificate https://github.com/kluck/custom-zsh/raw/master/kluck.zsh-theme -O ~/.oh-my-zsh/themes/kluck.zsh-theme
+wget --no-check-certificate https://github.com/kluck/custom-zsh/raw/master/custom-zshrc.zsh-template -O ~/.oh-my-zsh/templates/custom-zshrc.zsh-template
+
 echo "\033[0;34mLooking for an existing zsh config...\033[0m"
 if [ -f ~/.zshrc ] || [ -h ~/.zshrc ]
 then
@@ -19,7 +22,7 @@ then
 fi
 
 echo "\033[0;34mUsing the Oh My Zsh template file and adding it to ~/.zshrc\033[0m"
-cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+cp ~/.oh-my-zsh/templates/custom-zshrc.zsh-template ~/.zshrc
 
 echo "\033[0;34mCopying your current PATH and adding it to the end of ~/.zshrc for you.\033[0m"
 echo "export PATH=$PATH" >> ~/.zshrc
