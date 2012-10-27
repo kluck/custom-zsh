@@ -33,4 +33,7 @@ plugins=(git zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
+# Annoyed of the auto-correct functionality?
+unsetopt correct_all
+
 # Customize to your needs...
