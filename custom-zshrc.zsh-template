@@ -36,4 +36,8 @@ source $ZSH/oh-my-zsh.sh
 # Annoyed of the auto-correct functionality?
 unsetopt correct_all
 
+setopt INTERACTIVE_COMMENTS # allow inline comments
+
+autoload -U zmv
+
 # Customize to your needs...
